@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link href="css/a-chart.css" rel="stylesheet" media="screen">
+  <link href="https://fonts.googleapis.com/css?family=Roboto:400,500,700" rel="stylesheet">
+  <title>Электронное голосование в Москве</title>
+  <style>
+    body {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+    }
+    .app {
+      width: 90%;
+    }
+    .a-chart {
+      position: relative;
+    }
+    .a-chart__overview {
+      display: none;
+    }
+  </style>
+</head>
+<body>
+  <div class="app" id="app"></div>
+  <script src="js/a-chart.js"></script>
+  <script src="js/candidates-deg.js"></script>
+  <script src="js/votes-deg.js"></script>
+  <script>
+    const mode = 'line';
+  </script>
+  <script src="js/main.js"></script>
+</body>
+</html>
