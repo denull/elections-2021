@@ -43,7 +43,7 @@ for (let i = 0; i <= max; i++) {
   columns.push(['y' + i]);
   types['y' + i] = mode;
   colors['y' + i] = allColors[i];
-  names['y' + i] = i < max ? (i + 1) + (i == 2 ? '-ьи места' : '-ые места') : 'Остальные';
+  names['y' + i] = i < max ? (i + 1) + (i == 2 ? '-и места' : '-е места') : 'Остальные';
 }
 for (let pt of votesDeg) {
   const time = pt[0];
