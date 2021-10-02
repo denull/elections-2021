@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link href="css/a-chart.css" rel="stylesheet" media="screen">
+  <link href="https://fonts.googleapis.com/css?family=Roboto:400,500,700" rel="stylesheet">
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/dygraph/2.1.0/dygraph.min.js"></script>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/dygraph/2.1.0/dygraph.min.css" />
+  <link rel="stylesheet" href="css/styles.css"/>
+  <title>Электронное голосование в Москве</title>
+</head>
+<body>
+  <div class="app" id="app">
+    <h5 style="margin-top: 0">Время генерации блоков</h5>
+    <p>По горизонтали — время генерации блока, по вертикали — задержка в секундах относительно предыдущего блока.</p>
+    <label><input type="checkbox" checked onchange="toggleLogscale(this.value)"/> Логарифмический масштаб</label>
+    <p>На графике цифрами отмечены:
+      <ol>
+        <li>Начало голосования (17 сентября, 8:00)</li>
+        <li>Предположительно, момент перезапуска каких-то процессов, приводящих к растущим лагам в генерации блоков в одномандатном голосовании (18 сентября, 13:30)</li>
+        <li>Конец голосования (19 сентября, 20:00)</li>
+      </ol>
+    </p>
+    <p>См. также: <a href="lag-sing.html">одномандатные выборы</a>, <a href="lag-part.html">выборы по партийным спискам</a>, <a href="lag-mduma.html">выборы в Мосгордуму</a>, <a href="lag-shchukino.html" class="active">выборы в Щукино</a>.</p>
+  </div>
+  <script src="js/a-chart.js"></script>
+  <script src="js/shchukino_lag.js"></script>
+  <script>
+    const lagInit = initShchukino;
+    const lagData = lagShchukino;
+  </script>
+  <script src="js/blocks-lag.js"></script>
+</body>
+</html>
